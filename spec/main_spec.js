@@ -20,12 +20,36 @@ describe("测试描述", function(){
         expect(expect_string).to.equal(result);
     });
 
-    it("测试用例2", function(){
+    it("1  bottle of beer.", function(){
 
-        main();
-        var result = _.flatten(console.log.args).join("\n");
-        var expect_string = '';
+        
+        var number = 1;
+        var result = main(number);
 
-        expect(expect_string).to.equal(result);
+        expect(result).to.equal("1 bottle of beer on the wall, 1 bottle of beer.Take one down and pass it around, no more bottles of beer on the wall.");
+    });
+     it("99  bottle of beer.", function(){
+
+        
+        var number = 99;
+        var result = main(number);
+
+        expect(result).to.equal("No more bottles of beer on the wall, no more bottles of beer.Go to the store and buy some more, 99 bottles of beer on the wall.");
+    });
+     it("2  bottle of beer.", function(){
+
+        
+        var number = 2
+        var result = main(number);
+
+        expect(result).to.equal("2 bottles of beer on the wall, 2 bottles of beer.Take one down and pass it around, no more bottles of beer on the wall.");
+    });
+     it("3  bottle of beer.", function(){
+
+        
+        var number = 3
+        var result = main(number);
+
+        expect(result).to.equal("3 bottles of beer on the wall, 3 bottles of beer.Take one down and pass it around, no more bottles of beer on the wall.");
     });
 });
